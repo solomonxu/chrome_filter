@@ -37,7 +37,7 @@
    ```
 
 2. 或者下载 ZIP 文件：
-   - 打开项目的 Gitee 页面：[项目链接](https://gitee.com/solomonxu/chrome_filter.git )
+   - 打开项目的 Gitee 页面：[项目链接](https://gitee.com/solomonxu/chrome_filter.git)
    - 点击 "Download" 按钮，选择 "Download ZIP"
 
 ## 安装 Python
@@ -108,11 +108,11 @@
 
 3. 运行项目：
    ```
-   python main.py <page_url> <pattern>
+   python3 main.py <page_url> <pattern>
    ```
    把page_url和pattern分别替换成短视频页面URL和模式字符串。例如：
    ```
-   python main.py https://www.douyin.com/user/self?modal_id=6699298445137546509 douyinvod.com
+   python3 main.py https://www.douyin.com/user/self?modal_id=6699298445137546509 douyinvod.com
    ```
 ![界面截图](pics/screenshot1.png)
 
@@ -121,7 +121,9 @@
 
 以下是项目的示例截图：
 1. 短视频网页界面：
+
    ![项目效果](pics/screenshot2.png)
 
 2. 提取到原始视频后（不含水印）：
+
    ![项目效果](pics/screenshot3.png)
