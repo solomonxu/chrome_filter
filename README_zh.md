@@ -22,10 +22,10 @@
 - Python 3.8 或更高版本
 
 ### 安装步骤
-1. 下载项目源码
-2. 安装 Python
-3. 安装依赖包
-4. 安装第三方库
+1. 安装 Python
+2. 安装第三方库
+3. 下载项目源码
+4. 安装依赖包
 5. 运行项目
 
 ## 安装 Python
@@ -115,7 +115,6 @@ sudo apt install pip
    python3 main.py https://www.douyin.com/user/self?modal_id=6699298445137546509 douyinvod.com
    ```
    ![界面截图](pics/screenshot1.png)
-
 
 ## 效果
 在这个部分，我们将展示项目的运行效果，并提供相应的截图。

@@ -25,9 +25,9 @@ In this section, we will explain the deployment environment requirements of the 
 
 ### Installation steps
 1. Install Python
-2. Install dependency packages
-3. Install third-party libraries
-4. Download the project source code
+2. Install third-party libraries
+3. Download the project source code
+4. Install dependency packages
 5. Run the project
 
 ## Installing Python
@@ -118,7 +118,6 @@ Replace the <page_url> and <pattern> with the short video page URL and pattern s
    python3 main.py https://www.douyin.com/user/self?modal_id=6699298445137546509 douyinvod.com
    ```
    ![Screenshot](pics/screenshot1.png)
-
 
 ## Effect
 In this section, we will demonstrate the operational effectiveness of the project and provide corresponding screenshots.
