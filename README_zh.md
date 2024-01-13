@@ -28,6 +28,59 @@
 4. 安装第三方库
 5. 运行项目
 
+## 安装 Python
+以 Ubuntu 操作系统为例：
+```
+sudo apt update
+sudo apt install python3
+sudo apt install pip
+```
+
+## 安装第三方库：browsermob-proxy
+以Ubuntu操作系统为例：
+
+1. 安装 JDK ：
+   ```
+   sudo apt-get install openjdk-8-jdk
+   ```      
+
+2. 安装 browsermob-proxy：
+   ```
+   sudo wget --no-check-certificate https://github.com/lightbody/browsermob-proxy/releases/download/browsermob-proxy-2.1.4/browsermob-proxy-2.1.4-bin.zip
+   sudo unzip browsermob-proxy-2.1.4-bin.zip
+   sudo mv browsermob-proxy-2.1.4 /usr/local/browsermob-proxy
+   ```
+
+3. 将 browsermob-proxy 添加到环境变量。执行以下命令：
+   ```
+   cd /usr/local/browsermob-proxy/bin
+   sudo chmod ao+x browsermob-proxy
+   echo "export PATH=\$PATH:$(pwd)" >> ~/.bashrc
+   source ~/.bashrc
+   ```
+
+## 安装第三方库：Chrome
+以 Ubuntu 操作系统为例：
+
+1. 添加 Chrome 的软件源。运行以下命令以下载并安装 Google 的软件源密钥：：
+   ``` 
+   wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+   ``` 
+   然后运行以下命令以添加 Chrome 的软件源：
+   ``` 
+   sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+   ``` 
+
+2. 更新软件包列表。运行以下命令以更新 Ubuntu 的软件包列表：
+   ```
+   sudo apt update
+   ```
+
+3. 安装 Chrome 浏览器。运行以下命令以安装 Chrome：
+   ```
+   sudo apt install google-chrome-stable
+   ``` 
+
 ## 获取源码
    在这个部分，我们将提供获取项目源码的方法。
 
@@ -39,59 +92,6 @@
 2. 或者下载 ZIP 文件：
    - 打开项目的 Gitee 页面：[项目链接](https://gitee.com/solomonxu/chrome_filter.git)
    - 点击 "Download" 按钮，选择 "Download ZIP"
-
-## 安装 Python
-   以 Ubuntu 操作系统为例：
-   ```
-   sudo apt update
-   sudo apt install python3
-   sudo apt install pip
-   ```
-
-## 安装第三方库：browsermob-proxy
-   以Ubuntu操作系统为例：
-
-   1. 安装 JDK ：
-      ```
-      sudo apt-get install openjdk-8-jdk
-      ```      
-
-  2. 安装 browsermob-proxy：
-      ```
-      sudo wget --no-check-certificate https://github.com/lightbody/browsermob-proxy/releases/sudodownload/browsermob-proxy-2.1.4/browsermob-proxy-2.1.4-bin.zip
-      sudo unzip browsermob-proxy-2.1.4-bin.zip
-      sudo mv browsermob-proxy-2.1.4 /usr/local/browsermob-proxy
-      ```
-
-   3. 将 browsermob-proxy 添加到环境变量。执行以下命令：
-      ```
-      cd /usr/local/browsermob-proxy/bin
-      sudo chmod ao+x browsermob-proxy
-      echo "export PATH=\$PATH:$(pwd)" >> ~/.bashrc
-      source ~/.bashrc
-      ```
-
-## 安装第三方库：Chrome
-   以 Ubuntu 操作系统为例：
-
-   1. 添加 Chrome 的软件源。运行以下命令以下载并安装 Google 的软件源密钥：：
-      ``` 
-      wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-      ``` 
-      然后运行以下命令以添加 Chrome 的软件源：
-      ``` 
-      sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
-      ``` 
-
-   2. 更新软件包列表。运行以下命令以更新 Ubuntu 的软件包列表：
-      ```
-      sudo apt update
-      ```
-
-   3. 安装 Chrome 浏览器。运行以下命令以安装 Chrome：
-      ```
-      sudo apt install google-chrome-stable
-      ``` 
 
 ## 运行
 在这个部分，我们将提供运行项目的步骤。
@@ -114,7 +114,8 @@
    ```
    python3 main.py https://www.douyin.com/user/self?modal_id=6699298445137546509 douyinvod.com
    ```
-![界面截图](pics/screenshot1.png)
+   ![界面截图](pics/screenshot1.png)
+
 
 ## 效果
 在这个部分，我们将展示项目的运行效果，并提供相应的截图。

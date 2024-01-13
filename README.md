@@ -24,23 +24,11 @@ In this section, we will explain the deployment environment requirements of the 
 - Python 3.8 or higher
 
 ### Installation steps
-1. Download the project source code
-2. Install Python
-3. Install dependency packages
-4. Install third-party libraries
+1. Install Python
+2. Install dependency packages
+3. Install third-party libraries
+4. Download the project source code
 5. Run the project
-
-## Obtain source code
-In this section, we will provide a method to obtain the project source code.
-
-    1. Clone Github repository:
-       ```
-       git clone https://github.com/solomonxu/chrome_filter.git
-       ```
-
-    2. Alternatively, download the ZIP file:
-    - Open the github page of the project: [Project link]（ https://github.com/solomonxu/chrome_filter.git ）
-    - Click the "Download" button and select "Download ZIP"
 
 ## Installing Python
 Taking the Ubuntu operating system as an example:
@@ -53,79 +41,94 @@ Taking the Ubuntu operating system as an example:
 ## Installing third-party libraries: browsermob proxy
 Taking the Ubuntu operating system as an example:
 
-    1. Install JDK:
-        ```
-        Sudo apt install openjdk-8-jdk
-        ```
+1. Install JDK:
+   ```
+   sudo apt install openjdk-8-jdk
+   ```
 
-    2. Install browsermob-proxy:
-        ```
-        sudo wget --no-check-certificate https://github.com/lightbody/browsermob-proxy/releases/sudodownload/browsermob-proxy-2.1.4/browsermob-proxy-2.1.4-bin.zip
-        sudo unzip browsermob-proxy-2.1.4-bin.zip
-        sudo mv browsermob-proxy-2.1.4 /usr/local/browsermob-proxy
-        ```
+2. Install browsermob-proxy:
+   ```
+   sudo wget --no-check-certificate https://github.com/lightbody/browsermob-proxy/releases/download/browsermob-proxy-2.1.4/browsermob-proxy-2.1.4-bin.zip
+   sudo unzip browsermob-proxy-2.1.4-bin.zip
+   sudo mv browsermob-proxy-2.1.4 /usr/local/browsermob-proxy
+   ```
 
-    3. Add browsermob-proxy to the environment variable. Execute the following command:
-      ```
-      cd /usr/local/browsermob-proxy/bin
-      sudo chmod ao+x browsermob-proxy
-      echo "export PATH=\$PATH:$(pwd)" >> ~/.bashrc
-      source ~/.bashrc
-      ```
+3. Add browsermob-proxy to the environment variable. Execute the following command:
+   ```
+   cd /usr/local/browsermob-proxy/bin
+   sudo chmod ao+x browsermob-proxy
+   echo "export PATH=\$PATH:$(pwd)" >> ~/.bashrc
+   source ~/.bashrc
+   ```
 
 ## Installing third-party libraries: Chrome
 Taking the Ubuntu operating system as an example:
 
-    1. Add software sources for Chrome. Run the following command to download and install Google's software source key:
-      ``` 
-      wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-      ``` 
-      sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
-      ```
+1. Add software sources for Chrome. Run the following command to download and install Google's software source key:
+   ``` 
+   wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+   ``` 
+   Then run the following command to add the software source for Chrome:
+   ``` 
+   sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+   ```
 
-    2. Update the list of software packages. Run the following command to update the package list for Ubuntu:
-      ```
-      sudo apt update
-      ```
+2. Update the list of software packages. Run the following command to update the package list for Ubuntu:
+   ```
+   sudo apt update
+   ```
 
-    3. Install Chrome browser. Run the following command to install Chrome:
-      ```
-      sudo apt install google-chrome-stable
-      ``` 
+3. Install Chrome browser. Run the following command to install Chrome:
+   ```
+   sudo apt install google-chrome-stable
+   ``` 
+
+## Obtain source code
+In this section, we will provide a method to obtain the project source code.
+
+1. Clone Github repository:
+   ```
+   git clone https://github.com/solomonxu/chrome_filter.git
+   ```
+
+2. Alternatively, download the ZIP file:
+- Open the github page of the project: [Project link]（ https://github.com/solomonxu/chrome_filter.git ）
+- Click the "Download" button and select "Download ZIP"
 
 ## Running
 In this section, we will provide the steps to run the project.
 
-    1. Enter the project directory:
-      ```
-      cd chrome_filter
-      ```
+1. Enter the project directory:
+   ```
+   cd chrome_filter
+   ```
 
-    2. Install dependency packages:
-      ```
-      sudo pip install -r requirements.txt
-      ```
+2. Install dependency packages:
+   ```
+   sudo pip install -r requirements.txt
+   ```
 
-    3. Running the project:
-      ```
-      python3 main.py <page_url> <pattern>
-      ```
+3. Running the project:
+   ```
+   python3 main.py <page_url> <pattern>
+   ```
 
-    Replace the <page_url> and <pattern> with the short video page URL and pattern string, respectively. For example:
-      ```
-      python3 main.py https://www.douyin.com/user/self?modal_id=6699298445137546509 douyinvod.com
-      ```
+Replace the <page_url> and <pattern> with the short video page URL and pattern string, respectively. For example:
+   ```
+   python3 main.py https://www.douyin.com/user/self?modal_id=6699298445137546509 douyinvod.com
+   ```
    ![Screenshot](pics/screenshot1.png)
+
 
 ## Effect
 In this section, we will demonstrate the operational effectiveness of the project and provide corresponding screenshots.
 
-    The following is an example screenshot of the project:
+The following is an example screenshot of the project:
 
-    1. Short video web interface:
+1. Short video web interface:
 
-   ![Project Effect](pics/screenshot2.png)
+![Project Effect](pics/screenshot2.png)
 
-    2. After extracting to the original video (without watermark):
+2. After extracting to the original video (without watermark):
 
-   ![Project Effect](pics/screenshot3.png)
+![Project Effect](pics/screenshot3.png)
