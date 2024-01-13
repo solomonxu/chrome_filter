@@ -35,11 +35,11 @@ In this section, we will provide a method to obtain the project source code.
 
     1. Clone Github repository:
        ```
-       git clone https://gitee.com/solomonxu/chrome_filter.git
+       git clone https://github.com/solomonxu/chrome_filter.git
        ```
 
     2. Alternatively, download the ZIP file:
-    - Open the Gitee page of the project: [Project link]（ https://github.com/solomonxu/chrome_filter.git ）
+    - Open the github page of the project: [Project link]（ https://github.com/solomonxu/chrome_filter.git ）
     - Click the "Download" button and select "Download ZIP"
 
 ## Installing Python
